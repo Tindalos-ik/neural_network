@@ -1,9 +1,14 @@
-# PyTorch 神经网络实验
+# PyTorch YOLO 实验
 
-这个仓库用于学习 PyTorch 和实践不同类型的神经网络。`master` 是实验索引，各专题放在独立分支。
+本分支用于学习和实践 YOLO 目标检测。
 
-## 实验索引
+## 环境
 
-- **[卷积神经网络（`cnn`）](https://github.com/Tindalos-ik/neural_network/tree/cnn)**：PyTorch 入门、CIFAR-10 图像分类、ResNet-18 服饰识别。
+在仓库根目录运行：
 
-本地可用 `git switch cnn` 切换到卷积神经网络专题。
+```powershell
+uv sync --locked
+```
+
+`cnn` 和 `yolo` 共用仓库根目录的 `.venv`：Python 3.11，Windows 使用 CUDA 12.8 版 PyTorch。在 VS Code 选择 `.venv\Scripts\python.exe` 作为解释器或 Notebook 内核。
+
