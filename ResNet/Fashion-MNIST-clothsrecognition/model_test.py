@@ -5,7 +5,10 @@ import torch
 import torch.utils.data as Data
 from torchvision import transforms
 from torchvision.datasets import FashionMNIST
-from model import Residual, ResNet18
+if __package__:
+    from .model import Residual, ResNet18
+else:
+    from model import Residual, ResNet18
 
 # 权重和输出留在实验目录，数据从仓库根目录的 data/ 加载。
 ROOT = Path(__file__).resolve().parent
