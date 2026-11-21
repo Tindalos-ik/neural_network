@@ -7,14 +7,14 @@ from torchvision import transforms
 from torchvision.datasets import FashionMNIST
 from model import Residual, ResNet18
 
-# 数据、权重和输出都相对于脚本所在目录，不依赖终端的工作目录。
+# 权重和输出留在实验目录，数据从仓库根目录的 data/ 加载。
 ROOT = Path(__file__).resolve().parent
 
 
 # 加载 Fashion-MNIST 官方测试集。
 def load_test_data():
     dataset = FashionMNIST(
-        root=ROOT / "data",
+        root=ROOT.parent.parent / "data",
         train=False,
         transform=transforms.ToTensor(),
         download=True,

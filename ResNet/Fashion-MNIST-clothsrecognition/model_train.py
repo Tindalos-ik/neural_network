@@ -1,5 +1,6 @@
 import copy
 import time
+from pathlib import Path
 
 import torch
 from torchvision.datasets import FashionMNIST
@@ -18,7 +19,7 @@ def train_val_data_process():
     # 原图是 28*28，这里将图片大小调整为 224*224
     # 将像素转成 0-1 之间的小数，单张形状为 [1, 224, 224]
     train_data = FashionMNIST(
-        root='./data', 
+        root=Path(__file__).resolve().parents[2] / "data",
         train=True, 
         transform=transforms.ToTensor(), # ToTensor() 将图片转成张量
         download=True # 没有会自动下载
