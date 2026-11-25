@@ -1,27 +1,14 @@
 # PyTorch 神经网络实验
 
-这个仓库用于学习 PyTorch 和实践不同类型的神经网络。`master` 是实验索引，各专题放在独立分支。
-
 ## 实验索引
 
-- **[卷积神经网络（`cnn`）](https://github.com/Tindalos-ik/neural_network/tree/cnn)**：PyTorch 入门、CIFAR-10 图像分类、ResNet-18 服饰识别。
+### 图像分类（`cnn`）
 
-本地可用 `git switch cnn` 切换到卷积神经网络专题。
+- [TinyCNN](https://github.com/Tindalos-ik/neural_network/tree/cnn/lab00)：合成图像分类（PyTorch 入门）。
+- [SimpleCNN](https://github.com/Tindalos-ik/neural_network/blob/cnn/CNN/cnn.ipynb)：CIFAR-10 图像分类。
+- [LeNet-5](https://github.com/Tindalos-ik/neural_network/tree/cnn/LeNet/clothrecognition)、[AlexNet](https://github.com/Tindalos-ik/neural_network/tree/cnn/AlexNet/clothrecognition)、[VGG16](https://github.com/Tindalos-ik/neural_network/tree/cnn/VGG/clothrecognition)、[ResNet-18](https://github.com/Tindalos-ik/neural_network/tree/cnn/ResNet/Fashion-MNIST-clothsrecognition)：Fashion-MNIST 服饰分类。
+- [GoogLeNet](https://github.com/Tindalos-ik/neural_network/tree/cnn/GoogleNet/cat-and-dog)：猫狗图像分类。
 
-## 安装环境
+### 目标检测（`yolo`）
 
-安装 [uv](https://docs.astral.sh/uv/getting-started/installation/) 后，在仓库根目录执行：
-
-```sh
-uv sync --locked
-```
-
-uv 会按 `uv.lock` 创建并同步 Python 3.11 的 `.venv`。Windows 和 Linux 使用 CUDA 12.8 版 PyTorch。
-
-## 主要依赖
-
-- 深度学习：`torch`、`torchvision`、`torchsummary`、`thop`
-- 图像处理与评估：`opencv-python`、`Pillow`、`pycocotools`
-- 数值计算与绘图：`numpy`、`scipy`、`pandas`、`matplotlib`、`seaborn`
-- Notebook 与训练日志：`ipykernel`、`tensorboard`、`tqdm`
-- 其他：`PyYAML`、`requests`、`setuptools`
+- [YOLOv1](https://github.com/Tindalos-ik/neural_network/blob/yolo/yolov1/YOLOv1.md)：目标检测原理学习（仅理论笔记）。
